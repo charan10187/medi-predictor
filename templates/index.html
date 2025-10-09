@@ -1,84 +1,159 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediPredict Pro</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediPredict Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-laptop-medical"></i> MediPredict Pro</h1>
-            <div class="theme-switcher">
-                <i class="fas fa-sun"></i>
-                <label class="switch">
-                    <input type="checkbox" id="dark-mode-toggle">
-                    <span class="slider"></span>
-                </label>
-                <i class="fas fa-moon"></i>
-            </div>
-        </header>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+    <h1 class="text-4xl font-bold text-center mb-6 text-blue-700">MediPredict Pro</h1>
 
-        <main>
-            <div class="card input-card">
-                <h2><i class="fas fa-user-edit"></i> Patient Information</h2>
-                <div class="form-group">
-                    <label for="age">Age</label>
-                    <input type="number" id="age" placeholder="e.g., 55">
-                </div>
-                <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <select id="gender">
-                        <option value="" disabled selected>Select Gender</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="diagnosis">Diagnosis</label>
-                    <select id="diagnosis">
-                        <option value="" disabled selected>Select Diagnosis</option>
-                        {% for diagnosis in diagnoses %}
-                            <option value="{{ diagnosis }}">{{ diagnosis }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <button id="predictBtn">
-                    <span class="btn-text">Predict Treatment</span>
-                    <span class="spinner hidden"><i class="fas fa-spinner fa-spin"></i></span>
-                </button>
-                <div id="errorMessage" class="error-message hidden"></div>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="font-semibold">Age:</label>
+        <input id="age" type="number" class="w-full border p-2 rounded" />
+      </div>
 
-            <div id="predictionResult" class="card result-card hidden">
-                <h2><i class="fas fa-pills"></i> Predicted Treatment Plan</h2>
-                <div class="result-grid">
-                    <div class="result-item">
-                        <label>Drug Name</label>
-                        <p id="pred-drug"></p>
-                    </div>
-                    <div class="result-item">
-                        <label>Dosage</label>
-                        <p id="pred-dosage"></p>
-                    </div>
-                    <div class="result-item">
-                        <label>Route</label>
-                        <p id="pred-route"></p>
-                    </div>
-                    <div class="result-item">
-                        <label>Frequency</label>
-                        <p id="pred-freq"></p>
-                    </div>
-                </div>
-            </div>
-        </main>
+      <div>
+        <label class="font-semibold">Gender:</label>
+        <select id="gender" class="w-full border p-2 rounded">
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
 
-        <footer>
-            Developed by S. Sri Charan & S. Md Kaif
-        </footer>
+      <div>
+        <label class="font-semibold">Diagnosis:</label>
+        <select id="diagnosis" class="w-full border p-2 rounded">
+          <option value="">Select</option>
+          <option>Bronchiectasis</option>
+          <option>Community-Acquired Pneumonia</option>
+          <option>Chronic Bronchitis</option>
+          <option>Acute Exacerbation of COPD</option>
+          <option>Pulmonary Tuberculosis</option>
+          <option>Asthma with Infection</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="font-semibold">Resistance Test:</label>
+        <select id="resistanceTest" class="w-full border p-2 rounded">
+          <option value="">Select</option>
+          <option>Sensitive</option>
+          <option>Resistant</option>
+          <option>Intermediate</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="font-semibold">Complications:</label>
+        <select id="complications" class="w-full border p-2 rounded">
+          <option value="">Select</option>
+          <option>None</option>
+          <option>Pleural Effusion</option>
+          <option>Respiratory Failure</option>
+          <option>Lung Abscess</option>
+          <option>Sepsis</option>
+          <option>Pneumothorax</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="font-semibold">Comorbidities:</label>
+        <select id="comorbidities" class="w-full border p-2 rounded">
+          <option value="">Select</option>
+          <option>None</option>
+          <option>Diabetes</option>
+          <option>Heart Failure</option>
+          <option>Chronic Kidney Disease</option>
+          <option>Hypertension</option>
+          <option>COPD</option>
+          <option>HIV</option>
+          <option>Smoking</option>
+        </select>
+      </div>
     </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <button id="predictBtn" class="w-full bg-blue-600 text-white p-3 rounded mt-6 hover:bg-blue-700">
+      Predict Antibiotic
+    </button>
+
+    <div id="loadingIndicator" class="hidden mt-4 text-blue-600 font-medium">
+      Loading prediction...
+    </div>
+
+    <div id="predictionResult" class="hidden bg-blue-100 text-blue-900 p-4 mt-4 rounded font-semibold text-center">
+      Predicted Antibiotic: <span id="predictedAntibiotic"></span>
+    </div>
+
+    <div id="errorMessage" class="hidden bg-red-100 text-red-700 p-3 mt-4 rounded text-center font-medium">
+      Please fill in all fields.
+    </div>
+  </div>
+
+  <script>
+    const predictBtn = document.getElementById('predictBtn');
+    const predictionResultDiv = document.getElementById('predictionResult');
+    const predictedAntibioticSpan = document.getElementById('predictedAntibiotic');
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    const errorMessageDiv = document.getElementById('errorMessage');
+
+    const getValue = id => document.getElementById(id).value.trim();
+
+    predictBtn.addEventListener('click', async () => {
+      const age = getValue('age');
+      const gender = getValue('gender');
+      const diagnosis = getValue('diagnosis');
+      const resistanceTest = getValue('resistanceTest');
+      const complications = getValue('complications');
+      const comorbidities = getValue('comorbidities');
+
+      if (!age || !gender || !diagnosis || !resistanceTest || !complications || !comorbidities) {
+        errorMessageDiv.classList.remove('hidden');
+        predictionResultDiv.classList.add('hidden');
+        return;
+      }
+
+      errorMessageDiv.classList.add('hidden');
+      predictionResultDiv.classList.add('hidden');
+      loadingIndicator.classList.remove('hidden');
+
+      const data = {
+        Age: parseInt(age),
+        Gender: gender,
+        Diagnosis: diagnosis,
+        Antibiotic_Resistance_Test: resistanceTest,
+        Complications: complications,
+        Comorbidities: comorbidities
+      };
+
+      try {
+        const response = await fetch('/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.prediction) {
+          predictedAntibioticSpan.textContent = result.prediction;
+          predictionResultDiv.classList.remove('hidden');
+        } else {
+          throw new Error('Prediction failed');
+        }
+      } catch (error) {
+        errorMessageDiv.textContent = "Prediction failed. Please try again.";
+        errorMessageDiv.classList.remove('hidden');
+      } finally {
+        loadingIndicator.classList.add('hidden');
+      }
+    });
+  </script>
 </body>
 </html>

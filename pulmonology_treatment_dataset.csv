@@ -1,0 +1,501 @@
+Diagnosis,Antibiotic_Resistance_Test,Antibiotic_Treatment,Age,Gender,Complications,Comorbidities,Treatment_Outcome
+Bronchiectasis,Intermediate,Clarithromycin,69,Male,Pleural Effusion,Diabetes,Recovered
+Community-Acquired Pneumonia,Resistant,Levofloxacin,49,Other,None,Heart Failure,Improved
+Community-Acquired Pneumonia,Sensitive,Linezolid,21,Female,Respiratory Failure,Chronic Kidney Disease,Recovered
+Bronchiectasis,Resistant,Azithromycin,62,Other,Lung Abscess,Hypertension,Recovered
+Chronic Bronchitis,Sensitive,Doxycycline,27,Female,None,None,Recovered
+Acute Exacerbation of COPD,Resistant,Levofloxacin,44,Female,Sepsis,None,Recovered
+Community-Acquired Pneumonia,Resistant,Doxycycline,22,Male,Pleural Effusion,Diabetes,Recovered
+Community-Acquired Pneumonia,Sensitive,Azithromycin,81,Male,Respiratory Failure,COPD,Recovered
+Bronchiectasis,Resistant,Clarithromycin,81,Male,Pleural Effusion,HIV,Recovered
+Bronchiectasis,Intermediate,Linezolid,56,Female,None,Hypertension,Improved
+Acute Exacerbation of COPD,Resistant,Levofloxacin,69,Other,None,Hypertension,Improved
+Community-Acquired Pneumonia,Sensitive,Clarithromycin,21,Female,Lung Abscess,HIV,Recovered
+Acute Exacerbation of COPD,Resistant,Levofloxacin,29,Other,Sepsis,Heart Failure,Recovered
+Pulmonary Tuberculosis,Sensitive,Levofloxacin,77,Other,Pneumothorax,Smoking,Improved
+Asthma with Infection,Sensitive,Amoxicillin-Clavulanate,51,Female,None,Heart Failure,Recovered
+Asthma with Infection,Resistant,Levofloxacin,38,Male,Lung Abscess,Chronic Kidney Disease,Improved
+Bronchiectasis,Sensitive,Linezolid,41,Other,Pleural Effusion,Chronic Kidney Disease,Improved
+Bronchiectasis,Resistant,Linezolid,84,Male,Sepsis,None,Improved
+Acute Exacerbation of COPD,Resistant,Clarithromycin,80,Female,Sepsis,None,Improved
+Pulmonary Tuberculosis,Intermediate,Linezolid,62,Other,Lung Abscess,Smoking,Recovered
+Bronchiectasis,Intermediate,Clarithromycin,43,Other,Sepsis,HIV,Improved
+Chronic Bronchitis,Resistant,Clarithromycin,40,Other,Pleural Effusion,None,Recovered
+Pulmonary Tuberculosis,Resistant,Clarithromycin,76,Male,None,None,Recovered
+Chronic Bronchitis,Intermediate,Azithromycin,88,Other,Pneumothorax,Smoking,No Change
+Asthma with Infection,Resistant,Ceftriaxone,49,Female,Pneumothorax,Heart Failure,Recovered
+Pulmonary Tuberculosis,Resistant,Linezolid,25,Other,Lung Abscess,COPD,No Change
+Community-Acquired Pneumonia,Resistant,Linezolid,70,Female,Lung Abscess,Smoking,Recovered
+Bronchiectasis,Sensitive,Linezolid,74,Male,Pleural Effusion,None,Improved
+Bronchiectasis,Sensitive,Clarithromycin,23,Other,Respiratory Failure,Diabetes,Improved
+Pulmonary Tuberculosis,Intermediate,Amoxicillin-Clavulanate,39,Female,None,Hypertension,Recovered
+Community-Acquired Pneumonia,Resistant,Levofloxacin,77,Female,Respiratory Failure,Diabetes,Recovered
+Acute Exacerbation of COPD,Intermediate,Levofloxacin,18,Other,Respiratory Failure,Heart Failure,Deceased
+Bronchiectasis,Intermediate,Doxycycline,46,Other,Respiratory Failure,Chronic Kidney Disease,Recovered
+Asthma with Infection,Sensitive,Clarithromycin,75,Male,Pleural Effusion,Chronic Kidney Disease,Improved
+Asthma with Infection,Sensitive,Levofloxacin,81,Other,Respiratory Failure,Heart Failure,Improved
+Chronic Bronchitis,Intermediate,Clarithromycin,68,Other,Lung Abscess,Heart Failure,No Change
+Community-Acquired Pneumonia,Intermediate,Levofloxacin,80,Male,Respiratory Failure,HIV,Deceased
+Pulmonary Tuberculosis,Sensitive,Doxycycline,85,Female,Pneumothorax,Smoking,No Change
+Chronic Bronchitis,Resistant,Linezolid,78,Female,Lung Abscess,Chronic Kidney Disease,Recovered
+Bronchiectasis,Intermediate,Linezolid,48,Other,Respiratory Failure,Diabetes,Improved
+Asthma with Infection,Resistant,Amoxicillin-Clavulanate,35,Other,Pneumothorax,Hypertension,Improved
+Pulmonary Tuberculosis,Resistant,Amoxicillin-Clavulanate,22,Female,None,Chronic Kidney Disease,Recovered
+Community-Acquired Pneumonia,Sensitive,Amoxicillin-Clavulanate,52,Other,None,Chronic Kidney Disease,Recovered
+Community-Acquired Pneumonia,Resistant,Levofloxacin,42,Male,Lung Abscess,COPD,Deceased
+Pulmonary Tuberculosis,Resistant,Azithromycin,39,Female,Pneumothorax,Chronic Kidney Disease,Deteriorated
+Bronchiectasis,Sensitive,Azithromycin,74,Female,Pneumothorax,Heart Failure,Improved
+Pulmonary Tuberculosis,Sensitive,Amoxicillin-Clavulanate,88,Other,Pleural Effusion,Heart Failure,Deteriorated
+Acute Exacerbation of COPD,Sensitive,Azithromycin,50,Other,Lung Abscess,Heart Failure,Deteriorated
+Asthma with Infection,Intermediate,Ceftriaxone,64,Male,Respiratory Failure,COPD,Improved
+Chronic Bronchitis,Intermediate,Azithromycin,26,Male,Sepsis,COPD,Recovered
+Pulmonary Tuberculosis,Resistant,Doxycycline,44,Female,Pneumothorax,COPD,Deteriorated
+Asthma with Infection,Resistant,Levofloxacin,65,Other,Pleural Effusion,Hypertension,Recovered
+Pulmonary Tuberculosis,Intermediate,Clarithromycin,52,Male,Sepsis,Chronic Kidney Disease,Recovered
+Acute Exacerbation of COPD,Intermediate,Ceftriaxone,29,Male,Pneumothorax,Diabetes,No Change
+Asthma with Infection,Sensitive,Linezolid,28,Female,Lung Abscess,Hypertension,Deceased
+Asthma with Infection,Sensitive,Doxycycline,70,Female,Sepsis,COPD,Recovered
+Community-Acquired Pneumonia,Intermediate,Levofloxacin,44,Male,Pleural Effusion,Chronic Kidney Disease,Recovered
+Acute Exacerbation of COPD,Sensitive,Azithromycin,33,Male,Respiratory Failure,Heart Failure,Recovered
+Community-Acquired Pneumonia,Resistant,Levofloxacin,79,Female,Pleural Effusion,Diabetes,Recovered
+Chronic Bronchitis,Resistant,Ceftriaxone,62,Male,Pleural Effusion,Hypertension,No Change
+Asthma with Infection,Intermediate,Levofloxacin,71,Other,Sepsis,Diabetes,No Change
+Bronchiectasis,Resistant,Doxycycline,88,Female,Lung Abscess,Heart Failure,Improved
+Asthma with Infection,Sensitive,Doxycycline,64,Male,Pleural Effusion,Smoking,Deceased
+Chronic Bronchitis,Sensitive,Doxycycline,86,Female,Respiratory Failure,None,No Change
+Asthma with Infection,Sensitive,Ceftriaxone,63,Other,Pleural Effusion,Smoking,Improved
+Acute Exacerbation of COPD,Intermediate,Doxycycline,30,Female,Sepsis,None,Deteriorated
+Chronic Bronchitis,Sensitive,Clarithromycin,78,Male,Lung Abscess,Diabetes,Recovered
+Acute Exacerbation of COPD,Sensitive,Linezolid,45,Other,Pleural Effusion,Chronic Kidney Disease,Improved
+Bronchiectasis,Intermediate,Doxycycline,66,Female,None,Chronic Kidney Disease,Recovered
+Pulmonary Tuberculosis,Sensitive,Azithromycin,57,Other,Pneumothorax,Smoking,Recovered
+Bronchiectasis,Intermediate,Clarithromycin,54,Other,None,COPD,Improved
+Chronic Bronchitis,Resistant,Linezolid,48,Female,Pleural Effusion,None,Improved
+Acute Exacerbation of COPD,Sensitive,Linezolid,81,Female,Sepsis,Diabetes,Deteriorated
+Bronchiectasis,Resistant,Amoxicillin-Clavulanate,63,Female,Lung Abscess,HIV,Recovered
+Chronic Bronchitis,Intermediate,Azithromycin,56,Female,None,Heart Failure,Recovered
+Chronic Bronchitis,Resistant,Levofloxacin,52,Female,Respiratory Failure,HIV,Deteriorated
+Bronchiectasis,Intermediate,Ceftriaxone,66,Female,Lung Abscess,None,No Change
+Acute Exacerbation of COPD,Resistant,Amoxicillin-Clavulanate,73,Female,Sepsis,Hypertension,Recovered
+Asthma with Infection,Intermediate,Amoxicillin-Clavulanate,62,Male,Pneumothorax,COPD,Recovered
+Asthma with Infection,Resistant,Levofloxacin,35,Female,Lung Abscess,Smoking,Recovered
+Bronchiectasis,Intermediate,Doxycycline,40,Female,Pleural Effusion,Hypertension,Deteriorated
+Community-Acquired Pneumonia,Resistant,Amoxicillin-Clavulanate,47,Other,Sepsis,None,No Change
+Acute Exacerbation of COPD,Intermediate,Linezolid,55,Male,None,COPD,Deteriorated
+Asthma with Infection,Resistant,Amoxicillin-Clavulanate,55,Female,Sepsis,HIV,Deceased
+Acute Exacerbation of COPD,Sensitive,Ceftriaxone,81,Male,Pleural Effusion,Hypertension,No Change
+Acute Exacerbation of COPD,Resistant,Azithromycin,34,Male,Pneumothorax,Smoking,No Change
+Pulmonary Tuberculosis,Sensitive,Clarithromycin,60,Other,Pneumothorax,Heart Failure,Deceased
+Asthma with Infection,Resistant,Amoxicillin-Clavulanate,65,Female,Pneumothorax,HIV,Improved
+Community-Acquired Pneumonia,Intermediate,Doxycycline,73,Male,Lung Abscess,Heart Failure,Recovered
+Pulmonary Tuberculosis,Sensitive,Azithromycin,88,Male,Lung Abscess,None,No Change
+Pulmonary Tuberculosis,Intermediate,Linezolid,70,Male,Respiratory Failure,Diabetes,Recovered
+Asthma with Infection,Intermediate,Amoxicillin-Clavulanate,41,Female,None,Chronic Kidney Disease,Deteriorated
+Asthma with Infection,Resistant,Clarithromycin,21,Female,Sepsis,Chronic Kidney Disease,No Change
+Asthma with Infection,Resistant,Clarithromycin,70,Female,Respiratory Failure,HIV,Improved
+Community-Acquired Pneumonia,Sensitive,Azithromycin,36,Female,Sepsis,Hypertension,Deceased
+Pulmonary Tuberculosis,Sensitive,Linezolid,71,Male,Sepsis,HIV,Recovered
+Acute Exacerbation of COPD,Sensitive,Azithromycin,68,Other,Respiratory Failure,HIV,Recovered
+Community-Acquired Pneumonia,Sensitive,Clarithromycin,87,Male,Respiratory Failure,Diabetes,Recovered
+Asthma with Infection,Sensitive,Linezolid,80,Female,Sepsis,HIV,Deceased
+Chronic Bronchitis,Resistant,Doxycycline,88,Other,Lung Abscess,Heart Failure,Improved
+Acute Exacerbation of COPD,Sensitive,Linezolid,18,Male,None,Smoking,Recovered
+Bronchiectasis,Resistant,Clarithromycin,23,Female,None,Chronic Kidney Disease,No Change
+Pulmonary Tuberculosis,Intermediate,Azithromycin,78,Female,Sepsis,None,No Change
+Pulmonary Tuberculosis,Intermediate,Doxycycline,36,Female,Lung Abscess,Smoking,Deteriorated
+Acute Exacerbation of COPD,Resistant,Clarithromycin,65,Female,Pneumothorax,Diabetes,Recovered
+Asthma with Infection,Sensitive,Doxycycline,80,Other,None,Diabetes,Improved
+Bronchiectasis,Resistant,Doxycycline,29,Male,None,Diabetes,Improved
+Asthma with Infection,Sensitive,Levofloxacin,45,Other,None,Smoking,Improved
+Chronic Bronchitis,Intermediate,Clarithromycin,74,Other,Pleural Effusion,HIV,No Change
+Pulmonary Tuberculosis,Intermediate,Clarithromycin,26,Male,None,Diabetes,Recovered
+Pulmonary Tuberculosis,Intermediate,Linezolid,70,Other,Sepsis,COPD,Recovered
+Pulmonary Tuberculosis,Intermediate,Clarithromycin,26,Female,Lung Abscess,Diabetes,Recovered
+Acute Exacerbation of COPD,Intermediate,Doxycycline,75,Male,Pneumothorax,Smoking,Deteriorated
+Asthma with Infection,Resistant,Amoxicillin-Clavulanate,77,Male,Pleural Effusion,Diabetes,No Change
+Bronchiectasis,Intermediate,Levofloxacin,61,Other,Pleural Effusion,COPD,Improved
+Bronchiectasis,Resistant,Amoxicillin-Clavulanate,44,Other,Pleural Effusion,None,No Change
+Bronchiectasis,Resistant,Doxycycline,68,Other,Pleural Effusion,HIV,Deteriorated
+Asthma with Infection,Resistant,Linezolid,39,Other,Pleural Effusion,HIV,Deteriorated
+Acute Exacerbation of COPD,Resistant,Doxycycline,24,Other,Sepsis,Hypertension,Recovered
+Pulmonary Tuberculosis,Intermediate,Azithromycin,74,Male,Sepsis,Chronic Kidney Disease,Recovered
+Acute Exacerbation of COPD,Sensitive,Amoxicillin-Clavulanate,42,Male,Pneumothorax,Diabetes,Recovered
+Acute Exacerbation of COPD,Resistant,Levofloxacin,24,Male,Sepsis,None,Recovered
+Chronic Bronchitis,Intermediate,Linezolid,20,Male,None,None,Improved
+Pulmonary Tuberculosis,Intermediate,Levofloxacin,47,Female,Pleural Effusion,Smoking,Recovered
+Pulmonary Tuberculosis,Intermediate,Amoxicillin-Clavulanate,78,Female,Pleural Effusion,COPD,No Change
+Bronchiectasis,Intermediate,Levofloxacin,89,Female,Lung Abscess,COPD,No Change
+Chronic Bronchitis,Intermediate,Amoxicillin-Clavulanate,34,Male,Sepsis,Diabetes,Recovered
+Asthma with Infection,Intermediate,Ceftriaxone,54,Other,Pneumothorax,Diabetes,Recovered
+Asthma with Infection,Sensitive,Linezolid,24,Other,None,COPD,Deceased
+Community-Acquired Pneumonia,Resistant,Linezolid,48,Male,Pleural Effusion,Diabetes,Recovered
+Bronchiectasis,Intermediate,Levofloxacin,26,Female,Pneumothorax,Diabetes,Improved
+Community-Acquired Pneumonia,Sensitive,Azithromycin,46,Male,Lung Abscess,HIV,Recovered
+Acute Exacerbation of COPD,Intermediate,Linezolid,78,Other,Sepsis,Hypertension,Recovered
+Chronic Bronchitis,Resistant,Linezolid,45,Female,Pneumothorax,HIV,Improved
+Community-Acquired Pneumonia,Intermediate,Amoxicillin-Clavulanate,23,Male,Pneumothorax,Hypertension,Improved
+Pulmonary Tuberculosis,Sensitive,Levofloxacin,90,Female,None,None,Recovered
+Pulmonary Tuberculosis,Sensitive,Amoxicillin-Clavulanate,57,Female,Lung Abscess,HIV,Recovered
+Community-Acquired Pneumonia,Intermediate,Ceftriaxone,24,Male,Sepsis,COPD,Deteriorated
+Chronic Bronchitis,Resistant,Azithromycin,55,Other,Sepsis,Heart Failure,Improved
+Chronic Bronchitis,Intermediate,Doxycycline,48,Female,Pleural Effusion,HIV,Improved
+Pulmonary Tuberculosis,Sensitive,Linezolid,84,Female,Pleural Effusion,Smoking,Improved
+Pulmonary Tuberculosis,Intermediate,Levofloxacin,62,Female,Respiratory Failure,HIV,Recovered
+Pulmonary Tuberculosis,Resistant,Levofloxacin,68,Female,Sepsis,Smoking,Recovered
+Community-Acquired Pneumonia,Sensitive,Amoxicillin-Clavulanate,60,Other,Sepsis,Diabetes,Deteriorated
+Acute Exacerbation of COPD,Resistant,Amoxicillin-Clavulanate,28,Female,Respiratory Failure,Heart Failure,Recovered
+Community-Acquired Pneumonia,Resistant,Doxycycline,60,Male,Pleural Effusion,Chronic Kidney Disease,Improved
+Acute Exacerbation of COPD,Sensitive,Levofloxacin,82,Female,Pneumothorax,COPD,Improved
+Acute Exacerbation of COPD,Sensitive,Ceftriaxone,62,Other,Sepsis,Smoking,Deceased
+Community-Acquired Pneumonia,Intermediate,Amoxicillin-Clavulanate,35,Other,Pneumothorax,COPD,Improved
+Chronic Bronchitis,Intermediate,Linezolid,61,Female,Respiratory Failure,None,Improved
+Pulmonary Tuberculosis,Intermediate,Amoxicillin-Clavulanate,41,Male,None,Diabetes,Recovered
+Bronchiectasis,Intermediate,Ceftriaxone,44,Female,None,Smoking,Recovered
+Community-Acquired Pneumonia,Resistant,Azithromycin,53,Other,Pleural Effusion,Diabetes,Improved
+Asthma with Infection,Intermediate,Levofloxacin,40,Other,Respiratory Failure,COPD,Deteriorated
+Acute Exacerbation of COPD,Sensitive,Clarithromycin,20,Female,Pleural Effusion,Heart Failure,Improved
+Chronic Bronchitis,Sensitive,Levofloxacin,27,Male,Sepsis,HIV,Recovered
+Asthma with Infection,Resistant,Amoxicillin-Clavulanate,35,Male,Pleural Effusion,COPD,Deteriorated
+Community-Acquired Pneumonia,Resistant,Clarithromycin,21,Male,None,HIV,Recovered
+Asthma with Infection,Resistant,Clarithromycin,19,Other,Pleural Effusion,COPD,Recovered
+Bronchiectasis,Intermediate,Azithromycin,75,Female,Pneumothorax,Chronic Kidney Disease,Recovered
+Community-Acquired Pneumonia,Sensitive,Amoxicillin-Clavulanate,72,Male,Respiratory Failure,Hypertension,No Change
+Acute Exacerbation of COPD,Sensitive,Linezolid,80,Other,Sepsis,HIV,Recovered
+Chronic Bronchitis,Resistant,Clarithromycin,39,Female,Lung Abscess,None,Recovered
+Asthma with Infection,Intermediate,Linezolid,75,Other,Pleural Effusion,Hypertension,Recovered
+Acute Exacerbation of COPD,Sensitive,Clarithromycin,82,Female,Sepsis,COPD,Recovered
+Asthma with Infection,Resistant,Clarithromycin,38,Male,Pneumothorax,Diabetes,No Change
+Community-Acquired Pneumonia,Sensitive,Linezolid,50,Male,Respiratory Failure,Hypertension,Recovered
+Chronic Bronchitis,Intermediate,Levofloxacin,46,Female,None,Hypertension,Recovered
+Asthma with Infection,Resistant,Ceftriaxone,61,Male,Sepsis,Heart Failure,Recovered
+Bronchiectasis,Sensitive,Levofloxacin,48,Female,Pneumothorax,Hypertension,Recovered
+Community-Acquired Pneumonia,Resistant,Clarithromycin,74,Male,Respiratory Failure,Chronic Kidney Disease,Recovered
+Bronchiectasis,Sensitive,Doxycycline,34,Other,None,Chronic Kidney Disease,Recovered
+Bronchiectasis,Intermediate,Ceftriaxone,61,Other,Pneumothorax,Hypertension,No Change
+Pulmonary Tuberculosis,Resistant,Amoxicillin-Clavulanate,83,Other,Respiratory Failure,Diabetes,No Change
+Chronic Bronchitis,Sensitive,Linezolid,54,Male,Pneumothorax,COPD,Recovered
+Pulmonary Tuberculosis,Intermediate,Doxycycline,58,Other,Lung Abscess,COPD,Deceased
+Pulmonary Tuberculosis,Sensitive,Azithromycin,54,Female,Lung Abscess,HIV,Recovered
+Acute Exacerbation of COPD,Sensitive,Linezolid,77,Other,Pleural Effusion,COPD,Recovered
+Bronchiectasis,Resistant,Linezolid,85,Male,Pneumothorax,Hypertension,Recovered
+Community-Acquired Pneumonia,Resistant,Linezolid,22,Male,Pleural Effusion,Hypertension,Recovered
+Asthma with Infection,Intermediate,Amoxicillin-Clavulanate,31,Female,Pneumothorax,Heart Failure,Recovered
+Asthma with Infection,Sensitive,Azithromycin,36,Other,Sepsis,Diabetes,Recovered
+Chronic Bronchitis,Intermediate,Azithromycin,70,Male,Pneumothorax,HIV,No Change
+Bronchiectasis,Resistant,Levofloxacin,60,Other,None,Diabetes,Deteriorated
+Acute Exacerbation of COPD,Intermediate,Azithromycin,47,Male,None,Heart Failure,Recovered
+Acute Exacerbation of COPD,Sensitive,Ceftriaxone,89,Male,Pneumothorax,COPD,No Change
+Asthma with Infection,Sensitive,Azithromycin,37,Male,Sepsis,Hypertension,No Change
+Asthma with Infection,Intermediate,Linezolid,64,Female,Lung Abscess,HIV,Recovered
+Chronic Bronchitis,Resistant,Ceftriaxone,19,Female,Pneumothorax,Hypertension,Deteriorated
+Chronic Bronchitis,Resistant,Amoxicillin-Clavulanate,31,Other,Pleural Effusion,HIV,Recovered
+Asthma with Infection,Intermediate,Amoxicillin-Clavulanate,54,Male,Pneumothorax,Smoking,Recovered
+Bronchiectasis,Sensitive,Doxycycline,67,Other,Pleural Effusion,HIV,Improved
+Pulmonary Tuberculosis,Sensitive,Levofloxacin,19,Other,Lung Abscess,Smoking,No Change
+Community-Acquired Pneumonia,Resistant,Amoxicillin-Clavulanate,28,Female,Respiratory Failure,Chronic Kidney Disease,Recovered
+Asthma with Infection,Sensitive,Linezolid,47,Male,Pneumothorax,Diabetes,Recovered
+Acute Exacerbation of COPD,Resistant,Clarithromycin,78,Other,Respiratory Failure,Heart Failure,Improved
+Chronic Bronchitis,Resistant,Doxycycline,57,Other,Lung Abscess,Diabetes,Deteriorated
+Chronic Bronchitis,Resistant,Amoxicillin-Clavulanate,65,Other,Sepsis,None,Recovered
+Acute Exacerbation of COPD,Resistant,Amoxicillin-Clavulanate,88,Female,None,Heart Failure,Deteriorated
+Acute Exacerbation of COPD,Resistant,Clarithromycin,36,Male,Pneumothorax,Heart Failure,Recovered
+Pulmonary Tuberculosis,Sensitive,Doxycycline,79,Other,Sepsis,Chronic Kidney Disease,Recovered
+Chronic Bronchitis,Intermediate,Linezolid,51,Female,Pleural Effusion,Diabetes,Improved
+Community-Acquired Pneumonia,Resistant,Amoxicillin-Clavulanate,71,Other,Respiratory Failure,HIV,Recovered
+Asthma with Infection,Intermediate,Linezolid,41,Male,Pleural Effusion,HIV,Recovered
+Bronchiectasis,Resistant,Levofloxacin,64,Male,Respiratory Failure,Hypertension,No Change
+Chronic Bronchitis,Resistant,Azithromycin,50,Other,Pleural Effusion,COPD,Recovered
+Asthma with Infection,Sensitive,Levofloxacin,49,Female,Respiratory Failure,Hypertension,Recovered
+Community-Acquired Pneumonia,Intermediate,Ceftriaxone,75,Female,None,HIV,Improved
+Asthma with Infection,Resistant,Amoxicillin-Clavulanate,87,Female,Respiratory Failure,Heart Failure,Recovered
+Chronic Bronchitis,Resistant,Clarithromycin,70,Female,Respiratory Failure,COPD,Recovered
+Asthma with Infection,Resistant,Linezolid,43,Female,Sepsis,Chronic Kidney Disease,Recovered
+Pulmonary Tuberculosis,Sensitive,Levofloxacin,34,Female,Sepsis,Chronic Kidney Disease,Recovered
+Acute Exacerbation of COPD,Resistant,Azithromycin,20,Other,Respiratory Failure,Heart Failure,Deteriorated
+Acute Exacerbation of COPD,Resistant,Levofloxacin,56,Male,Pneumothorax,COPD,Recovered
+Pulmonary Tuberculosis,Sensitive,Azithromycin,58,Other,Pneumothorax,Smoking,Improved
+Chronic Bronchitis,Sensitive,Linezolid,48,Female,None,HIV,Improved
+Acute Exacerbation of COPD,Intermediate,Clarithromycin,60,Other,Lung Abscess,None,No Change
+Bronchiectasis,Intermediate,Clarithromycin,52,Female,None,None,Improved
+Asthma with Infection,Intermediate,Levofloxacin,49,Other,Sepsis,None,Recovered
+Pulmonary Tuberculosis,Intermediate,Levofloxacin,61,Female,None,COPD,Recovered
+Chronic Bronchitis,Sensitive,Clarithromycin,58,Male,Pleural Effusion,Smoking,Improved
+Asthma with Infection,Intermediate,Doxycycline,64,Male,Pleural Effusion,Hypertension,Recovered
+Bronchiectasis,Intermediate,Amoxicillin-Clavulanate,47,Male,Lung Abscess,None,Recovered
+Pulmonary Tuberculosis,Sensitive,Levofloxacin,34,Female,Sepsis,HIV,Recovered
+Acute Exacerbation of COPD,Resistant,Ceftriaxone,54,Other,Sepsis,Diabetes,Improved
+Asthma with Infection,Resistant,Ceftriaxone,23,Other,Respiratory Failure,COPD,No Change
+Pulmonary Tuberculosis,Resistant,Levofloxacin,21,Other,Respiratory Failure,Heart Failure,Recovered
+Pulmonary Tuberculosis,Resistant,Linezolid,59,Female,Sepsis,Heart Failure,Recovered
+Bronchiectasis,Intermediate,Ceftriaxone,63,Other,Respiratory Failure,Smoking,Recovered
+Chronic Bronchitis,Sensitive,Amoxicillin-Clavulanate,90,Male,Respiratory Failure,Heart Failure,Improved
+Chronic Bronchitis,Intermediate,Levofloxacin,44,Male,Sepsis,HIV,Recovered
+Chronic Bronchitis,Resistant,Amoxicillin-Clavulanate,81,Female,Respiratory Failure,Hypertension,No Change
+Community-Acquired Pneumonia,Intermediate,Ceftriaxone,72,Other,Sepsis,None,Improved
+Chronic Bronchitis,Resistant,Amoxicillin-Clavulanate,61,Other,Pleural Effusion,Heart Failure,Recovered
+Asthma with Infection,Resistant,Linezolid,35,Male,Lung Abscess,Chronic Kidney Disease,Recovered
+Bronchiectasis,Intermediate,Doxycycline,83,Male,Pleural Effusion,Hypertension,Deteriorated
+Pulmonary Tuberculosis,Resistant,Azithromycin,79,Female,Pleural Effusion,Heart Failure,Deceased
+Pulmonary Tuberculosis,Resistant,Clarithromycin,66,Other,Pneumothorax,Hypertension,Deteriorated
+Bronchiectasis,Resistant,Amoxicillin-Clavulanate,22,Male,Sepsis,Hypertension,Improved
+Pulmonary Tuberculosis,Resistant,Levofloxacin,51,Other,Sepsis,HIV,Improved
+Chronic Bronchitis,Sensitive,Linezolid,55,Female,Respiratory Failure,HIV,Recovered
+Bronchiectasis,Sensitive,Amoxicillin-Clavulanate,42,Male,Sepsis,Chronic Kidney Disease,Improved
+Acute Exacerbation of COPD,Resistant,Levofloxacin,90,Other,None,HIV,Recovered
+Pulmonary Tuberculosis,Intermediate,Azithromycin,50,Other,Pneumothorax,Diabetes,Recovered
+Acute Exacerbation of COPD,Sensitive,Amoxicillin-Clavulanate,57,Other,Respiratory Failure,Diabetes,Recovered
+Community-Acquired Pneumonia,Intermediate,Ceftriaxone,86,Other,Sepsis,Heart Failure,Recovered
+Community-Acquired Pneumonia,Intermediate,Ceftriaxone,89,Other,Respiratory Failure,Smoking,No Change
+Community-Acquired Pneumonia,Resistant,Clarithromycin,80,Male,Lung Abscess,Smoking,No Change
+Pulmonary Tuberculosis,Sensitive,Azithromycin,38,Male,Sepsis,Heart Failure,Recovered
+Community-Acquired Pneumonia,Resistant,Levofloxacin,47,Other,Pleural Effusion,None,Improved
+Bronchiectasis,Intermediate,Levofloxacin,27,Other,None,Hypertension,No Change
+Asthma with Infection,Resistant,Levofloxacin,73,Other,None,COPD,Recovered
+Acute Exacerbation of COPD,Intermediate,Levofloxacin,24,Other,Pneumothorax,Chronic Kidney Disease,Recovered
+Community-Acquired Pneumonia,Sensitive,Doxycycline,73,Male,Pneumothorax,Smoking,Improved
+Asthma with Infection,Resistant,Azithromycin,42,Female,Pleural Effusion,None,Recovered
+Bronchiectasis,Intermediate,Clarithromycin,21,Other,Pneumothorax,Chronic Kidney Disease,Improved
+Asthma with Infection,Resistant,Amoxicillin-Clavulanate,36,Other,Lung Abscess,Heart Failure,Deteriorated
+Community-Acquired Pneumonia,Intermediate,Levofloxacin,89,Female,Lung Abscess,COPD,Recovered
+Community-Acquired Pneumonia,Intermediate,Amoxicillin-Clavulanate,39,Male,Sepsis,Heart Failure,Recovered
+Asthma with Infection,Sensitive,Doxycycline,47,Female,Pleural Effusion,Smoking,Recovered
+Community-Acquired Pneumonia,Sensitive,Doxycycline,72,Male,Pneumothorax,COPD,Recovered
+Community-Acquired Pneumonia,Sensitive,Amoxicillin-Clavulanate,87,Other,Pneumothorax,Smoking,No Change
+Bronchiectasis,Intermediate,Doxycycline,47,Male,Pneumothorax,COPD,Recovered
+Pulmonary Tuberculosis,Sensitive,Linezolid,36,Other,None,Hypertension,Recovered
+Pulmonary Tuberculosis,Intermediate,Ceftriaxone,88,Female,Pneumothorax,None,Recovered
+Chronic Bronchitis,Intermediate,Amoxicillin-Clavulanate,40,Other,Pneumothorax,Chronic Kidney Disease,No Change
+Chronic Bronchitis,Sensitive,Doxycycline,21,Other,Pleural Effusion,Hypertension,Recovered
+Chronic Bronchitis,Resistant,Amoxicillin-Clavulanate,68,Other,Pleural Effusion,COPD,Recovered
+Asthma with Infection,Resistant,Azithromycin,64,Other,None,HIV,Improved
+Community-Acquired Pneumonia,Intermediate,Levofloxacin,82,Female,Pneumothorax,Hypertension,Deceased
+Community-Acquired Pneumonia,Intermediate,Amoxicillin-Clavulanate,27,Female,Pneumothorax,HIV,Improved
+Chronic Bronchitis,Resistant,Doxycycline,69,Female,Pneumothorax,COPD,Improved
+Community-Acquired Pneumonia,Resistant,Doxycycline,43,Other,None,Hypertension,No Change
+Pulmonary Tuberculosis,Sensitive,Levofloxacin,71,Male,None,COPD,Improved
+Bronchiectasis,Sensitive,Clarithromycin,82,Male,None,Smoking,Recovered
+Asthma with Infection,Sensitive,Azithromycin,71,Other,Pleural Effusion,Smoking,Recovered
+Acute Exacerbation of COPD,Resistant,Azithromycin,27,Other,Pneumothorax,Smoking,Improved
+Pulmonary Tuberculosis,Sensitive,Clarithromycin,42,Male,Pleural Effusion,Diabetes,Improved
+Community-Acquired Pneumonia,Sensitive,Amoxicillin-Clavulanate,48,Male,Sepsis,Hypertension,Recovered
+Acute Exacerbation of COPD,Intermediate,Linezolid,71,Male,None,Heart Failure,Recovered
+Acute Exacerbation of COPD,Intermediate,Azithromycin,80,Female,Pleural Effusion,COPD,Deteriorated
+Pulmonary Tuberculosis,Intermediate,Azithromycin,62,Male,None,Heart Failure,Improved
+Asthma with Infection,Intermediate,Azithromycin,49,Female,Pleural Effusion,Diabetes,Recovered
+Pulmonary Tuberculosis,Sensitive,Linezolid,77,Other,Pleural Effusion,Hypertension,No Change
+Pulmonary Tuberculosis,Intermediate,Linezolid,59,Male,Sepsis,Hypertension,Recovered
+Community-Acquired Pneumonia,Intermediate,Azithromycin,31,Female,Pneumothorax,Diabetes,Recovered
+Bronchiectasis,Sensitive,Doxycycline,31,Male,Pleural Effusion,Smoking,No Change
+Community-Acquired Pneumonia,Resistant,Doxycycline,81,Other,Lung Abscess,None,Improved
+Bronchiectasis,Resistant,Azithromycin,38,Female,Pneumothorax,Smoking,Recovered
+Acute Exacerbation of COPD,Intermediate,Ceftriaxone,33,Other,Pleural Effusion,HIV,Recovered
+Pulmonary Tuberculosis,Sensitive,Amoxicillin-Clavulanate,86,Female,Lung Abscess,Smoking,Deteriorated
+Acute Exacerbation of COPD,Intermediate,Doxycycline,28,Other,Pleural Effusion,HIV,Recovered
+Community-Acquired Pneumonia,Intermediate,Azithromycin,71,Female,Pleural Effusion,Hypertension,No Change
+Acute Exacerbation of COPD,Resistant,Ceftriaxone,77,Female,Respiratory Failure,Heart Failure,No Change
+Chronic Bronchitis,Intermediate,Doxycycline,86,Female,Respiratory Failure,COPD,Improved
+Bronchiectasis,Intermediate,Linezolid,57,Other,Lung Abscess,Hypertension,Deteriorated
+Asthma with Infection,Resistant,Linezolid,90,Other,Sepsis,Chronic Kidney Disease,Deteriorated
+Acute Exacerbation of COPD,Resistant,Levofloxacin,22,Female,None,Diabetes,Recovered
+Pulmonary Tuberculosis,Sensitive,Doxycycline,56,Female,Sepsis,HIV,Improved
+Pulmonary Tuberculosis,Resistant,Doxycycline,61,Female,None,Smoking,Improved
+Community-Acquired Pneumonia,Intermediate,Amoxicillin-Clavulanate,67,Other,Lung Abscess,HIV,Improved
+Bronchiectasis,Intermediate,Amoxicillin-Clavulanate,40,Male,Sepsis,Heart Failure,Recovered
+Pulmonary Tuberculosis,Sensitive,Amoxicillin-Clavulanate,31,Male,Pleural Effusion,COPD,Improved
+Chronic Bronchitis,Resistant,Linezolid,89,Male,Pneumothorax,HIV,Improved
+Chronic Bronchitis,Intermediate,Amoxicillin-Clavulanate,86,Female,Pneumothorax,Hypertension,Recovered
+Acute Exacerbation of COPD,Resistant,Amoxicillin-Clavulanate,78,Female,Pleural Effusion,Heart Failure,Improved
+Chronic Bronchitis,Resistant,Clarithromycin,58,Other,Respiratory Failure,Smoking,Recovered
+Community-Acquired Pneumonia,Sensitive,Linezolid,85,Male,Pleural Effusion,Hypertension,Improved
+Pulmonary Tuberculosis,Intermediate,Azithromycin,49,Other,Sepsis,COPD,Deceased
+Bronchiectasis,Resistant,Ceftriaxone,32,Female,Lung Abscess,Diabetes,Improved
+Community-Acquired Pneumonia,Intermediate,Amoxicillin-Clavulanate,84,Other,Pneumothorax,HIV,Recovered
+Pulmonary Tuberculosis,Sensitive,Levofloxacin,88,Male,Pneumothorax,Heart Failure,Deteriorated
+Community-Acquired Pneumonia,Resistant,Azithromycin,25,Female,Respiratory Failure,None,Recovered
+Asthma with Infection,Resistant,Clarithromycin,52,Other,Pleural Effusion,Diabetes,Recovered
+Pulmonary Tuberculosis,Resistant,Doxycycline,79,Male,Pleural Effusion,Heart Failure,Recovered
+Bronchiectasis,Resistant,Doxycycline,45,Female,Respiratory Failure,Hypertension,Deceased
+Acute Exacerbation of COPD,Resistant,Azithromycin,63,Female,None,Smoking,No Change
+Asthma with Infection,Resistant,Clarithromycin,35,Male,None,Hypertension,Recovered
+Bronchiectasis,Resistant,Ceftriaxone,28,Male,Respiratory Failure,Hypertension,Recovered
+Asthma with Infection,Intermediate,Ceftriaxone,51,Other,Pleural Effusion,HIV,Improved
+Chronic Bronchitis,Intermediate,Levofloxacin,66,Female,Sepsis,Smoking,Recovered
+Pulmonary Tuberculosis,Intermediate,Levofloxacin,57,Female,Pleural Effusion,Chronic Kidney Disease,Recovered
+Asthma with Infection,Intermediate,Azithromycin,47,Female,Pleural Effusion,Chronic Kidney Disease,Recovered
+Acute Exacerbation of COPD,Sensitive,Ceftriaxone,45,Male,Lung Abscess,Hypertension,Recovered
+Chronic Bronchitis,Sensitive,Levofloxacin,32,Female,None,Chronic Kidney Disease,Recovered
+Chronic Bronchitis,Sensitive,Azithromycin,47,Male,Lung Abscess,Hypertension,Deceased
+Acute Exacerbation of COPD,Intermediate,Linezolid,66,Female,Sepsis,COPD,Recovered
+Chronic Bronchitis,Resistant,Linezolid,45,Male,Pneumothorax,Hypertension,Improved
+Bronchiectasis,Sensitive,Ceftriaxone,23,Female,Respiratory Failure,Heart Failure,Deceased
+Pulmonary Tuberculosis,Resistant,Clarithromycin,44,Female,Sepsis,COPD,Deteriorated
+Bronchiectasis,Sensitive,Clarithromycin,87,Male,Lung Abscess,None,Improved
+Bronchiectasis,Intermediate,Amoxicillin-Clavulanate,21,Female,Lung Abscess,HIV,Recovered
+Acute Exacerbation of COPD,Intermediate,Clarithromycin,88,Male,Lung Abscess,Chronic Kidney Disease,Improved
+Bronchiectasis,Sensitive,Clarithromycin,52,Male,Respiratory Failure,HIV,Recovered
+Pulmonary Tuberculosis,Resistant,Linezolid,36,Female,Lung Abscess,HIV,No Change
+Community-Acquired Pneumonia,Resistant,Azithromycin,83,Female,Pneumothorax,Chronic Kidney Disease,Recovered
+Acute Exacerbation of COPD,Intermediate,Azithromycin,87,Other,None,Hypertension,Recovered
+Pulmonary Tuberculosis,Sensitive,Doxycycline,58,Female,None,Hypertension,Recovered
+Acute Exacerbation of COPD,Intermediate,Levofloxacin,60,Female,Sepsis,HIV,Improved
+Asthma with Infection,Resistant,Levofloxacin,87,Male,Pleural Effusion,Heart Failure,No Change
+Pulmonary Tuberculosis,Intermediate,Clarithromycin,43,Other,None,Heart Failure,Recovered
+Asthma with Infection,Sensitive,Linezolid,19,Female,Respiratory Failure,None,Deceased
+Pulmonary Tuberculosis,Intermediate,Amoxicillin-Clavulanate,24,Male,Pleural Effusion,Diabetes,Improved
+Chronic Bronchitis,Resistant,Ceftriaxone,50,Other,Pleural Effusion,COPD,Improved
+Chronic Bronchitis,Resistant,Levofloxacin,84,Male,Lung Abscess,Chronic Kidney Disease,No Change
+Bronchiectasis,Resistant,Levofloxacin,59,Male,None,HIV,Improved
+Chronic Bronchitis,Resistant,Levofloxacin,90,Male,Pleural Effusion,None,Improved
+Bronchiectasis,Intermediate,Ceftriaxone,87,Other,Pleural Effusion,COPD,Recovered
+Chronic Bronchitis,Sensitive,Linezolid,67,Other,None,HIV,Improved
+Community-Acquired Pneumonia,Sensitive,Ceftriaxone,71,Other,Respiratory Failure,COPD,Improved
+Pulmonary Tuberculosis,Resistant,Amoxicillin-Clavulanate,47,Male,Pleural Effusion,Heart Failure,Recovered
+Bronchiectasis,Sensitive,Azithromycin,22,Other,Lung Abscess,Hypertension,Improved
+Chronic Bronchitis,Intermediate,Amoxicillin-Clavulanate,83,Male,Lung Abscess,Chronic Kidney Disease,Improved
+Asthma with Infection,Sensitive,Linezolid,41,Other,Lung Abscess,Smoking,Recovered
+Asthma with Infection,Sensitive,Amoxicillin-Clavulanate,65,Male,Sepsis,None,Recovered
+Acute Exacerbation of COPD,Intermediate,Ceftriaxone,75,Male,Respiratory Failure,Chronic Kidney Disease,No Change
+Chronic Bronchitis,Resistant,Doxycycline,48,Other,Lung Abscess,Diabetes,Recovered
+Community-Acquired Pneumonia,Sensitive,Ceftriaxone,66,Female,Lung Abscess,Heart Failure,Recovered
+Chronic Bronchitis,Resistant,Amoxicillin-Clavulanate,30,Male,Pneumothorax,Heart Failure,No Change
+Bronchiectasis,Resistant,Linezolid,67,Female,Pleural Effusion,None,Deceased
+Pulmonary Tuberculosis,Intermediate,Ceftriaxone,51,Male,Pleural Effusion,COPD,Deceased
+Asthma with Infection,Resistant,Linezolid,56,Other,Pneumothorax,Smoking,Recovered
+Asthma with Infection,Intermediate,Levofloxacin,83,Male,Sepsis,Heart Failure,Recovered
+Pulmonary Tuberculosis,Resistant,Ceftriaxone,31,Male,Lung Abscess,Diabetes,Recovered
+Asthma with Infection,Resistant,Doxycycline,21,Other,Respiratory Failure,None,Improved
+Pulmonary Tuberculosis,Resistant,Doxycycline,43,Male,Lung Abscess,Smoking,Improved
+Bronchiectasis,Sensitive,Ceftriaxone,61,Other,Respiratory Failure,COPD,Deceased
+Bronchiectasis,Intermediate,Ceftriaxone,63,Other,Pleural Effusion,Chronic Kidney Disease,No Change
+Pulmonary Tuberculosis,Sensitive,Clarithromycin,23,Male,Lung Abscess,Chronic Kidney Disease,Improved
+Bronchiectasis,Intermediate,Amoxicillin-Clavulanate,79,Other,Sepsis,HIV,Recovered
+Acute Exacerbation of COPD,Resistant,Doxycycline,39,Other,Respiratory Failure,Hypertension,Improved
+Bronchiectasis,Sensitive,Amoxicillin-Clavulanate,56,Female,Pneumothorax,None,No Change
+Asthma with Infection,Intermediate,Azithromycin,35,Other,Sepsis,COPD,Recovered
+Asthma with Infection,Sensitive,Doxycycline,88,Other,Lung Abscess,Diabetes,Improved
+Acute Exacerbation of COPD,Resistant,Levofloxacin,23,Female,Lung Abscess,Diabetes,No Change
+Acute Exacerbation of COPD,Intermediate,Clarithromycin,86,Male,Pleural Effusion,Heart Failure,Improved
+Pulmonary Tuberculosis,Intermediate,Levofloxacin,34,Female,Pleural Effusion,COPD,Recovered
+Community-Acquired Pneumonia,Intermediate,Linezolid,25,Female,Respiratory Failure,Hypertension,Recovered
+Chronic Bronchitis,Sensitive,Azithromycin,22,Male,Lung Abscess,HIV,Recovered
+Chronic Bronchitis,Sensitive,Azithromycin,23,Female,Pneumothorax,Heart Failure,Recovered
+Community-Acquired Pneumonia,Intermediate,Levofloxacin,66,Male,None,Diabetes,Recovered
+Acute Exacerbation of COPD,Sensitive,Linezolid,77,Female,Respiratory Failure,Hypertension,Recovered
+Asthma with Infection,Intermediate,Ceftriaxone,88,Other,Pleural Effusion,HIV,Recovered
+Community-Acquired Pneumonia,Sensitive,Doxycycline,53,Other,Pneumothorax,Heart Failure,Improved
+Community-Acquired Pneumonia,Intermediate,Clarithromycin,76,Female,Respiratory Failure,Chronic Kidney Disease,Deteriorated
+Community-Acquired Pneumonia,Intermediate,Azithromycin,58,Male,Respiratory Failure,Heart Failure,No Change
+Community-Acquired Pneumonia,Intermediate,Levofloxacin,18,Male,Pneumothorax,COPD,No Change
+Asthma with Infection,Resistant,Clarithromycin,55,Female,Lung Abscess,None,Improved
+Asthma with Infection,Intermediate,Doxycycline,32,Female,Respiratory Failure,Hypertension,Recovered
+Pulmonary Tuberculosis,Resistant,Clarithromycin,82,Female,Lung Abscess,Heart Failure,Recovered
+Bronchiectasis,Intermediate,Amoxicillin-Clavulanate,41,Female,Respiratory Failure,COPD,Deteriorated
+Pulmonary Tuberculosis,Sensitive,Ceftriaxone,64,Male,Lung Abscess,None,No Change
+Acute Exacerbation of COPD,Intermediate,Azithromycin,44,Male,Sepsis,Hypertension,Recovered
+Acute Exacerbation of COPD,Intermediate,Ceftriaxone,19,Other,Lung Abscess,COPD,No Change
+Acute Exacerbation of COPD,Resistant,Doxycycline,41,Other,Respiratory Failure,COPD,Deceased
+Asthma with Infection,Intermediate,Levofloxacin,49,Female,Pneumothorax,Smoking,Recovered
+Pulmonary Tuberculosis,Resistant,Doxycycline,71,Female,Lung Abscess,HIV,Improved
+Chronic Bronchitis,Sensitive,Amoxicillin-Clavulanate,77,Male,Pneumothorax,Hypertension,No Change
+Acute Exacerbation of COPD,Intermediate,Clarithromycin,55,Female,Respiratory Failure,Chronic Kidney Disease,Recovered
+Pulmonary Tuberculosis,Resistant,Clarithromycin,41,Male,Respiratory Failure,Diabetes,Deteriorated
+Acute Exacerbation of COPD,Resistant,Ceftriaxone,71,Female,Pneumothorax,Diabetes,No Change
+Pulmonary Tuberculosis,Intermediate,Linezolid,63,Other,None,Diabetes,Recovered
+Community-Acquired Pneumonia,Resistant,Levofloxacin,67,Other,Respiratory Failure,None,Recovered
+Acute Exacerbation of COPD,Intermediate,Azithromycin,20,Female,Pleural Effusion,Hypertension,Recovered
+Acute Exacerbation of COPD,Sensitive,Levofloxacin,46,Other,Sepsis,HIV,Improved
+Chronic Bronchitis,Intermediate,Linezolid,76,Male,Pneumothorax,None,Recovered
+Community-Acquired Pneumonia,Sensitive,Linezolid,37,Other,Pleural Effusion,HIV,Deceased
+Acute Exacerbation of COPD,Resistant,Ceftriaxone,72,Female,Respiratory Failure,COPD,Recovered
+Bronchiectasis,Sensitive,Levofloxacin,41,Female,None,None,Improved
+Asthma with Infection,Sensitive,Levofloxacin,55,Other,Respiratory Failure,HIV,Recovered
+Community-Acquired Pneumonia,Intermediate,Linezolid,42,Female,Pleural Effusion,Chronic Kidney Disease,Improved
+Pulmonary Tuberculosis,Resistant,Linezolid,50,Female,Lung Abscess,Heart Failure,Deteriorated
+Community-Acquired Pneumonia,Sensitive,Clarithromycin,90,Other,Pneumothorax,HIV,Recovered
+Acute Exacerbation of COPD,Resistant,Amoxicillin-Clavulanate,22,Other,Sepsis,Hypertension,Recovered
+Acute Exacerbation of COPD,Intermediate,Ceftriaxone,19,Other,Respiratory Failure,Diabetes,No Change
+Pulmonary Tuberculosis,Intermediate,Doxycycline,29,Other,Pneumothorax,Heart Failure,Deteriorated
+Pulmonary Tuberculosis,Resistant,Amoxicillin-Clavulanate,85,Other,Sepsis,Hypertension,Recovered
+Acute Exacerbation of COPD,Intermediate,Linezolid,84,Female,Lung Abscess,Heart Failure,Deteriorated
+Chronic Bronchitis,Resistant,Amoxicillin-Clavulanate,22,Other,Sepsis,Heart Failure,Recovered
+Chronic Bronchitis,Intermediate,Azithromycin,75,Male,None,Chronic Kidney Disease,Recovered
+Community-Acquired Pneumonia,Resistant,Linezolid,26,Other,Respiratory Failure,COPD,Recovered
+Chronic Bronchitis,Intermediate,Levofloxacin,29,Other,Lung Abscess,Chronic Kidney Disease,Recovered
+Asthma with Infection,Resistant,Ceftriaxone,56,Female,Pneumothorax,Hypertension,Recovered
+Acute Exacerbation of COPD,Resistant,Azithromycin,79,Other,Respiratory Failure,Diabetes,Improved
+Community-Acquired Pneumonia,Intermediate,Clarithromycin,37,Male,Pleural Effusion,Hypertension,Improved
+Pulmonary Tuberculosis,Intermediate,Doxycycline,42,Other,None,Hypertension,Recovered
+Pulmonary Tuberculosis,Resistant,Levofloxacin,58,Male,Respiratory Failure,Hypertension,No Change
+Acute Exacerbation of COPD,Resistant,Clarithromycin,35,Male,Sepsis,Hypertension,Improved
+Acute Exacerbation of COPD,Sensitive,Doxycycline,59,Female,Lung Abscess,Diabetes,No Change
+Acute Exacerbation of COPD,Intermediate,Azithromycin,27,Other,Lung Abscess,HIV,Recovered
+Bronchiectasis,Intermediate,Ceftriaxone,43,Female,Pneumothorax,None,No Change
+Community-Acquired Pneumonia,Sensitive,Clarithromycin,23,Male,None,Chronic Kidney Disease,Recovered
+Asthma with Infection,Intermediate,Amoxicillin-Clavulanate,88,Other,Sepsis,HIV,Deceased
+Community-Acquired Pneumonia,Intermediate,Levofloxacin,64,Male,Pleural Effusion,Diabetes,Recovered
+Chronic Bronchitis,Intermediate,Azithromycin,41,Other,Pleural Effusion,Diabetes,Improved
+Community-Acquired Pneumonia,Intermediate,Ceftriaxone,47,Male,Sepsis,Heart Failure,No Change
+Pulmonary Tuberculosis,Intermediate,Doxycycline,51,Male,Lung Abscess,COPD,Deteriorated
+Asthma with Infection,Resistant,Ceftriaxone,74,Other,Sepsis,HIV,No Change
+Acute Exacerbation of COPD,Sensitive,Doxycycline,29,Other,Pleural Effusion,HIV,Recovered
+Chronic Bronchitis,Sensitive,Doxycycline,25,Female,Pneumothorax,Heart Failure,Recovered
+Pulmonary Tuberculosis,Intermediate,Doxycycline,39,Male,Pneumothorax,Hypertension,No Change
+Asthma with Infection,Sensitive,Clarithromycin,78,Other,Pneumothorax,None,Recovered
+Bronchiectasis,Sensitive,Linezolid,50,Male,Sepsis,Hypertension,No Change
+Pulmonary Tuberculosis,Resistant,Azithromycin,65,Female,Sepsis,Hypertension,Recovered
+Community-Acquired Pneumonia,Intermediate,Doxycycline,30,Other,Pneumothorax,Diabetes,No Change
+Chronic Bronchitis,Intermediate,Amoxicillin-Clavulanate,85,Other,Pleural Effusion,Diabetes,Recovered
+Acute Exacerbation of COPD,Intermediate,Amoxicillin-Clavulanate,87,Other,None,Diabetes,No Change
+Chronic Bronchitis,Intermediate,Ceftriaxone,28,Male,None,Diabetes,Recovered
+Acute Exacerbation of COPD,Sensitive,Levofloxacin,34,Female,Respiratory Failure,Diabetes,Recovered
+Community-Acquired Pneumonia,Resistant,Ceftriaxone,68,Male,Sepsis,Heart Failure,Improved
+Community-Acquired Pneumonia,Sensitive,Doxycycline,70,Other,Respiratory Failure,Diabetes,Recovered
+Chronic Bronchitis,Resistant,Ceftriaxone,63,Male,Pleural Effusion,HIV,No Change
+Bronchiectasis,Intermediate,Ceftriaxone,20,Other,Sepsis,HIV,Deceased
+Chronic Bronchitis,Intermediate,Doxycycline,47,Female,Lung Abscess,Chronic Kidney Disease,Deteriorated
+Bronchiectasis,Sensitive,Levofloxacin,42,Other,None,Diabetes,Recovered
+Bronchiectasis,Resistant,Amoxicillin-Clavulanate,74,Other,Pleural Effusion,Heart Failure,Improved
+Pulmonary Tuberculosis,Resistant,Ceftriaxone,49,Other,Pneumothorax,Chronic Kidney Disease,Improved
+Asthma with Infection,Resistant,Azithromycin,41,Other,Respiratory Failure,COPD,Recovered
+Bronchiectasis,Sensitive,Doxycycline,69,Male,Sepsis,None,Recovered
+Pulmonary Tuberculosis,Resistant,Levofloxacin,52,Other,Respiratory Failure,HIV,Deteriorated
+Acute Exacerbation of COPD,Resistant,Linezolid,65,Male,Respiratory Failure,Chronic Kidney Disease,No Change
+Pulmonary Tuberculosis,Resistant,Amoxicillin-Clavulanate,64,Female,Pleural Effusion,Chronic Kidney Disease,Improved
+Acute Exacerbation of COPD,Intermediate,Azithromycin,62,Female,Lung Abscess,Chronic Kidney Disease,No Change
+Asthma with Infection,Intermediate,Ceftriaxone,47,Female,Respiratory Failure,Heart Failure,Improved
+Bronchiectasis,Resistant,Azithromycin,28,Male,Sepsis,Hypertension,Recovered
+Asthma with Infection,Resistant,Linezolid,70,Female,Respiratory Failure,None,Recovered
+Bronchiectasis,Sensitive,Clarithromycin,28,Female,Respiratory Failure,Heart Failure,Recovered
+Acute Exacerbation of COPD,Sensitive,Ceftriaxone,62,Male,Pleural Effusion,Hypertension,Recovered
+Community-Acquired Pneumonia,Sensitive,Clarithromycin,30,Other,Pleural Effusion,Smoking,Deteriorated
+Chronic Bronchitis,Resistant,Ceftriaxone,76,Female,Sepsis,Diabetes,Recovered
+Bronchiectasis,Intermediate,Linezolid,33,Female,Pneumothorax,Hypertension,Recovered
+Chronic Bronchitis,Resistant,Azithromycin,68,Other,Sepsis,Smoking,Recovered
+Acute Exacerbation of COPD,Resistant,Amoxicillin-Clavulanate,41,Male,None,None,No Change
+Pulmonary Tuberculosis,Intermediate,Levofloxacin,77,Other,Pneumothorax,Hypertension,Improved
+Acute Exacerbation of COPD,Sensitive,Doxycycline,25,Male,None,HIV,Deceased
+Community-Acquired Pneumonia,Intermediate,Amoxicillin-Clavulanate,19,Female,Respiratory Failure,Smoking,No Change
+Community-Acquired Pneumonia,Sensitive,Levofloxacin,53,Other,Lung Abscess,Heart Failure,Deteriorated
+Chronic Bronchitis,Intermediate,Amoxicillin-Clavulanate,47,Female,None,Chronic Kidney Disease,No Change
+Pulmonary Tuberculosis,Resistant,Doxycycline,63,Female,None,Diabetes,Recovered
+Community-Acquired Pneumonia,Resistant,Azithromycin,86,Female,Pneumothorax,Heart Failure,No Change
+Acute Exacerbation of COPD,Intermediate,Levofloxacin,56,Female,Pleural Effusion,Hypertension,Recovered
+Asthma with Infection,Intermediate,Doxycycline,29,Male,Respiratory Failure,HIV,Recovered
+Bronchiectasis,Resistant,Linezolid,46,Male,None,Heart Failure,Improved
+Asthma with Infection,Intermediate,Linezolid,69,Male,Pleural Effusion,Smoking,Recovered
+Community-Acquired Pneumonia,Intermediate,Doxycycline,80,Male,Sepsis,Hypertension,No Change
+Asthma with Infection,Intermediate,Doxycycline,27,Female,Respiratory Failure,COPD,Recovered
+Pulmonary Tuberculosis,Sensitive,Doxycycline,68,Male,Sepsis,Chronic Kidney Disease,Improved
+Acute Exacerbation of COPD,Intermediate,Levofloxacin,37,Other,Sepsis,Diabetes,Recovered
+Chronic Bronchitis,Sensitive,Azithromycin,44,Female,Pleural Effusion,Chronic Kidney Disease,Improved
+Asthma with Infection,Intermediate,Amoxicillin-Clavulanate,31,Female,Pneumothorax,Smoking,Improved
+Community-Acquired Pneumonia,Intermediate,Clarithromycin,25,Male,Sepsis,HIV,Improved
+Community-Acquired Pneumonia,Sensitive,Levofloxacin,82,Female,None,HIV,Recovered
+Pulmonary Tuberculosis,Sensitive,Amoxicillin-Clavulanate,44,Male,Lung Abscess,Smoking,No Change
+Community-Acquired Pneumonia,Sensitive,Doxycycline,23,Other,Respiratory Failure,Chronic Kidney Disease,No Change
+Asthma with Infection,Resistant,Ceftriaxone,61,Female,Pleural Effusion,Diabetes,Deceased
+Chronic Bronchitis,Sensitive,Levofloxacin,28,Female,Respiratory Failure,HIV,Recovered
+Chronic Bronchitis,Intermediate,Doxycycline,74,Other,Pleural Effusion,Heart Failure,Recovered
+Asthma with Infection,Resistant,Amoxicillin-Clavulanate,20,Female,Respiratory Failure,None,Recovered
+Pulmonary Tuberculosis,Sensitive,Levofloxacin,75,Male,Respiratory Failure,Diabetes,Recovered
+Community-Acquired Pneumonia,Resistant,Levofloxacin,55,Other,Lung Abscess,Smoking,Deteriorated

@@ -1,78 +1,115 @@
 import os
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 import pandas as pd
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn.preprocessing import LabelEncoder
 import joblib
-import numpy as np
 
 app = Flask(__name__)
+CORS(app)
 
-# --- Load All Model Artifacts at Startup ---
-MODEL_FILE = "model_artifacts.joblib"
+model = None
+label_encoder = None
+feature_columns = None
+categorical_cols = [
+    'Gender',
+    'Diagnosis',
+    'Antibiotic_Resistance_Test',
+    'Complications',
+    'Comorbidities'
+]
 
-if not os.path.exists(MODEL_FILE):
-    print(f"❌ FATAL ERROR: Model file not found at '{MODEL_FILE}'!")
-    print("Please run 'train.py' first to create the model artifacts.")
+def train_and_load_model():
+    global model, label_encoder, feature_columns
+
+    try:
+        df = pd.read_csv('pulmonology_treatment_dataset.csv')
+        print("Dataset loaded successfully for backend training.")
+    except FileNotFoundError:
+        print("Error: 'pulmonology_treatment_dataset.csv' not found.")
+        return False
+    except Exception as e:
+        print(f"Error loading dataset: {e}")
+        return False
+
+    features_df = df.drop(['Treatment_Outcome'], axis=1)
+    features_processed = pd.get_dummies(features_df, columns=categorical_cols, drop_first=True)
+
+    X = features_processed.drop('Antibiotic_Treatment', axis=1)
+    y = features_processed['Antibiotic_Treatment']
+
+    label_encoder = LabelEncoder()
+    y_encoded = label_encoder.fit_transform(y)
+
+    feature_columns = X.columns.tolist()
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.2, random_state=42, stratify=y_encoded)
+
+    print("Backend: Performing Hyperparameter Tuning with GridSearchCV...")
+    param_grid = {
+        'n_estimators': [100, 200],
+        'max_depth': [None, 10],
+        'min_samples_split': [2, 5],
+        'min_samples_leaf': [1, 2]
+    }
+    grid_search = GridSearchCV(estimator=RandomForestClassifier(random_state=42),
+                               param_grid=param_grid,
+                               cv=3,
+                               scoring='accuracy',
+                               n_jobs=-1,
+                               verbose=0)
+
+    grid_search.fit(X_train, y_train)
+    best_params = grid_search.best_params_
+    print(f"Backend: Best parameters found: {best_params}")
+
+    model = RandomForestClassifier(**best_params, random_state=42)
+    model.fit(X_train, y_train)
+    print("Backend: Model training complete.")
+    return True
+
+# Train model on startup
+if not train_and_load_model():
+    print("Backend: Model training failed. Exiting.")
     exit()
-
-artifacts = joblib.load(MODEL_FILE)
-models = artifacts['models']
-label_encoders = artifacts['label_encoders']
-input_features = artifacts['input_features']
-print(f"✅ All model artifacts loaded successfully from '{MODEL_FILE}'.")
-
 
 @app.route('/')
 def index():
-    # Load the dataset to get unique diagnoses for the dropdown
-    try:
-        df = pd.read_csv("Hopsital Dataset.csv")
-        # Get unique, sorted, non-empty diagnosis values
-        diagnoses = sorted([str(d) for d in df['Diagnosis'].dropna().unique() if d])
-    except FileNotFoundError:
-        diagnoses = [] # In case the file is not found, provide an empty list
-        print("⚠️ Warning: 'Hopsital Dataset.csv' not found. Diagnosis dropdown will be empty.")
-
-    return render_template('index.html', diagnoses=diagnoses)
-
+    return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
-def predict():
+def predict_antibiotic():
+    if model is None or label_encoder is None or feature_columns is None:
+        return jsonify({'error': 'Model not loaded. Please check backend logs.'}), 500
+
     try:
         data = request.get_json(force=True)
-        
-        # Create a DataFrame from the input
-        input_df = pd.DataFrame([data], columns=input_features)
+        print(f"Received data: {data}")
 
-        # Preprocess input data using loaded encoders
-        for col in ['Gender', 'Diagnosis']:
-            le = label_encoders[col]
-            # Handle unseen labels by mapping to the first known class
-            input_df[col] = input_df[col].astype(str).apply(lambda x: x if x in le.classes_ else le.classes_[0])
-            input_df[col] = le.transform(input_df[col])
-        
-        # Ensure all columns are numeric
-        input_df = input_df.apply(pd.to_numeric, errors='coerce').fillna(0)
+        input_df = pd.DataFrame([data])
 
-        # --- Make Predictions with Each Model ---
-        pred_drug_encoded = models['drug'].predict(input_df)
-        pred_dosage = models['dosage'].predict(input_df)
-        pred_route_encoded = models['route'].predict(input_df)
-        pred_freq_encoded = models['frequency'].predict(input_df)
+        for col in ['Complications', 'Comorbidities']:
+            if col in input_df.columns:
+                input_df[col] = input_df[col].fillna('None')
 
-        # --- Decode Predictions ---
-        pred_drug = label_encoders['Name of Drug'].inverse_transform(pred_drug_encoded)[0]
-        pred_route = label_encoders['Route'].inverse_transform(pred_route_encoded)[0]
-        pred_freq = label_encoders['Frequency'].inverse_transform(pred_freq_encoded)[0]
+        processed_input = pd.get_dummies(input_df, columns=categorical_cols, drop_first=True)
 
-        # Format the response
-        response = {
-            'drug': pred_drug,
-            'dosage': f"{pred_dosage[0]:.2f} grams", # Format dosage to 2 decimal places
-            'route': pred_route,
-            'frequency': pred_freq
-        }
+        missing_cols = set(feature_columns) - set(processed_input.columns)
+        for c in missing_cols:
+            processed_input[c] = 0
 
-        return jsonify(response)
+        processed_input = processed_input[feature_columns]
+
+        print("Processed input for prediction:")
+        print(processed_input)
+
+        prediction_encoded = model.predict(processed_input)
+        predicted_antibiotic = label_encoder.inverse_transform(prediction_encoded)[0]
+
+        return jsonify({'prediction': predicted_antibiotic})
 
     except Exception as e:
         print(f"Error during prediction: {e}")
@@ -80,4 +117,5 @@ def predict():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(host='0.0.0.0', port=port, debug=True)
+
