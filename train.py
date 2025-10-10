@@ -1,107 +1,81 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
+import lightgbm as lgb
 import joblib
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 import warnings
+import os
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
 # --- Configuration ---
-DATASET_FILE = "Hopsital Dataset.csv"
-MODEL_FILE = "model_artifacts.joblib"
+# IMPORTANT: Change this to the exact name of your Google Sheet
+GOOGLE_SHEET_NAME = "Your Google Sheet Name Here"
+WORKSHEET_NAME = "data"
+CREDENTIALS_FILE = "credentials.json"
+MODEL_FILE = "model_artifacts.joblib" # Saves the model in your project folder
 
-def train_all_models():
-    """
-    Trains four separate models for Drug, Dosage, Route, and Frequency
-    and saves them all as a single artifact.
-    """
+def get_data_from_google_sheet():
+    """Fetches data from Google Sheet and returns a Pandas DataFrame."""
     try:
-        df = pd.read_csv(DATASET_FILE)
-        print(f"✅ Data loaded successfully from '{DATASET_FILE}'.")
-    except FileNotFoundError:
-        print(f"❌ Error: Dataset file not found at '{DATASET_FILE}'.")
+        scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
+                 "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
+        creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, scope)
+        client = gspread.authorize(creds)
+        sheet = client.open(GOOGLE_SHEET_NAME).worksheet(WORKSHEET_NAME)
+        data = sheet.get_all_records()
+        print("✅ Data loaded successfully from Google Sheet.")
+        return pd.DataFrame(data)
+    except Exception as e:
+        print(f"❌ Error fetching data: {e}")
+        return None
+
+def train_model():
+    """Trains the LightGBM model and saves the artifacts."""
+    df = get_data_from_google_sheet()
+    if df is None:
         return
 
-    # --- 1. Data Cleaning & Preparation ---
+    # --- Data Cleaning ---
+    if 'Date of Data Entry' in df.columns:
+        df = df.drop(columns=['Date of Data Entry'])
+    df.dropna(inplace=True)
 
-    # --- NEW: Clean the Age column ---
-    # Convert 'Age' to a numeric type. If any value can't be converted (like the word 'Age'),
-    # it will be replaced with NaN (Not a Number).
-    df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
+    for col in df.select_dtypes(include=['object']).columns:
+        df[col] = df[col].astype(str)
 
-    # Drop any rows where 'Age' is now NaN, and also drop rows with missing essential data.
-    df.dropna(subset=['Age', 'Gender', 'Diagnosis', 'Name of Drug', 'Dosage (gram)', 'Route', 'Frequency'], inplace=True)
+    # --- Preprocessing ---
+    target_column = 'Name of Drug'
+    X = df.drop(columns=[target_column])
+    y = df[target_column]
 
-    # Ensure 'Age' is an integer after cleaning
-    df['Age'] = df['Age'].astype(int)
-    
-    # Define inputs and outputs
-    input_features = ['Age', 'Gender', 'Diagnosis']
-    output_targets = ['Name of Drug', 'Dosage (gram)', 'Route', 'Frequency']
-    
-    X = df[input_features].copy() # Use .copy() to avoid SettingWithCopyWarning
-    y = df[output_targets]
-
-    # --- 2. Preprocessing ---
     label_encoders = {}
-    
-    # Encode categorical input features
-    for col in ['Gender', 'Diagnosis']:
+    for col in X.select_dtypes(include=['object']).columns:
         le = LabelEncoder()
-        X[col] = le.fit_transform(X[col].astype(str))
+        X[col] = le.fit_transform(X[col])
         label_encoders[col] = le
 
-    # --- 3. Train a Model for Each Target ---
-    models = {}
+    le_target = LabelEncoder()
+    y_encoded = le_target.fit_transform(y)
+    label_encoders[target_column] = le_target
     
-    # --- Target 1: Name of Drug (Classifier) ---
-    print("🚀 Training Drug Name model...")
-    le_drug = LabelEncoder()
-    y_drug_encoded = le_drug.fit_transform(y['Name of Drug'])
-    label_encoders['Name of Drug'] = le_drug
-    model_drug = RandomForestClassifier(n_estimators=100, random_state=42)
-    model_drug.fit(X, y_drug_encoded)
-    models['drug'] = model_drug
-    print("✅ Drug Name model trained.")
+    feature_columns = X.columns.tolist()
 
-    # --- Target 2: Dosage (Regressor) ---
-    print("🚀 Training Dosage model...")
-    y_dosage = y['Dosage (gram)']
-    y_dosage = pd.to_numeric(y_dosage, errors='coerce').fillna(0)
-    model_dosage = RandomForestRegressor(n_estimators=100, random_state=42)
-    model_dosage.fit(X, y_dosage)
-    models['dosage'] = model_dosage
-    print("✅ Dosage model trained.")
+    # --- Model Training ---
+    print("🚀 Starting model training with LightGBM...")
+    model = lgb.LGBMClassifier(random_state=42)
+    model.fit(X, y_encoded)
+    print("✅ Model training complete.")
 
-    # --- Target 3: Route (Classifier) ---
-    print("🚀 Training Route model...")
-    le_route = LabelEncoder()
-    y_route_encoded = le_route.fit_transform(y['Route'])
-    label_encoders['Route'] = le_route
-    model_route = RandomForestClassifier(n_estimators=100, random_state=42)
-    model_route.fit(X, y_route_encoded)
-    models['route'] = model_route
-    print("✅ Route model trained.")
-
-    # --- Target 4: Frequency (Classifier) ---
-    print("🚀 Training Frequency model...")
-    le_freq = LabelEncoder()
-    y_freq_encoded = le_freq.fit_transform(y['Frequency'])
-    label_encoders['Frequency'] = le_freq
-    model_freq = RandomForestClassifier(n_estimators=100, random_state=42)
-    model_freq.fit(X, y_freq_encoded)
-    models['frequency'] = model_freq
-    print("✅ Frequency model trained.")
-
-    # --- 4. Save All Artifacts ---
+    # --- Save Artifacts ---
     artifacts = {
-        'models': models,
+        'model': model,
         'label_encoders': label_encoders,
-        'input_features': input_features
+        'feature_columns': feature_columns
     }
     joblib.dump(artifacts, MODEL_FILE)
-    print(f"\n💾 All models and artifacts saved to '{MODEL_FILE}'")
+    print(f"💾 Model artifacts saved to '{MODEL_FILE}'")
 
 if __name__ == '__main__':
-    train_all_models()
+    train_model()
