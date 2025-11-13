@@ -7,6 +7,13 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.preprocessing import LabelEncoder
 import joblib
+# Load dataset for dropdown list
+try:
+    dropdown_df = pd.read_csv('pulmonology_treatment_dataset.csv')
+    diagnoses_list = sorted(dropdown_df['Diagnosis'].dropna().unique().tolist())
+except:
+    diagnoses_list = []
+
 
 app = Flask(__name__)
 CORS(app)
@@ -78,7 +85,7 @@ if not train_and_load_model():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', diagnoses=diagnoses_list)
 
 @app.route('/predict', methods=['POST'])
 def predict_antibiotic():
