@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediPredict Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-laptop-medical"></i> MediPredict Pro</h1>
+            <div class="theme-switcher">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </header>
+
+        <main>
+            <div class="card input-card">
+                <h2><i class="fas fa-user-edit"></i> Patient Information</h2>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="e.g., 55">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="diagnosis">Diagnosis</label>
+                    <select id="diagnosis">
+                        <option value="" disabled selected>Select Diagnosis</option>
+                        {% for diagnosis in diagnoses %}
+                            <option value="{{ diagnosis }}">{{ diagnosis }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button id="predictBtn">
+                    <span class="btn-text">Predict Treatment</span>
+                    <span class="spinner hidden"><i class="fas fa-spinner fa-spin"></i></span>
+                </button>
+                <div id="errorMessage" class="error-message hidden"></div>
+            </div>
+
+            <div id="predictionResult" class="card result-card hidden">
+                <h2><i class="fas fa-pills"></i> Predicted Treatment Plan</h2>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <label>Drug Name</label>
+                        <p id="pred-drug"></p>
+                    </div>
+                    <div class="result-item">
+                        <label>Dosage</label>
+                        <p id="pred-dosage"></p>
+                    </div>
+                    <div class="result-item">
+                        <label>Route</label>
+                        <p id="pred-route"></p>
+                    </div>
+                    <div class="result-item">
+                        <label>Frequency</label>
+                        <p id="pred-freq"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            Developed by S. Sri Charan
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
