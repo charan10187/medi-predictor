@@ -1,26 +1,19 @@
-# app.py (REPLACE)
 import os
 from flask import Flask, request, jsonify, render_template
 import pandas as pd
 import joblib
 import numpy as np
-
 app = Flask(__name__)
-
 MODEL_FILE = "model_artifacts.joblib"
-
 if not os.path.exists(MODEL_FILE):
     raise SystemExit(f"Model artifacts not found at '{MODEL_FILE}'. Run train.py first.")
-
 artifacts = joblib.load(MODEL_FILE)
 models = artifacts['models']
 label_encoders = artifacts['label_encoders']
 input_features = artifacts['input_features']
 input_mappings = artifacts.get('input_mappings', {})
 diagnoses_for_dropdown = artifacts.get('diagnoses', [])
-
 print("Loaded model artifacts.")
-
 def encode_input(data):
     # Expect keys: 'Age', 'Gender', 'Diagnosis'
     age = data.get('Age', None)
@@ -70,8 +63,12 @@ def predict():
             'route': pred_route,
             'frequency': pred_freq
         }
+
+        
+        
         return jsonify(response)
 
+    
     except Exception as e:
         print("Prediction error:", e)
         return jsonify({'error': str(e)}), 400
